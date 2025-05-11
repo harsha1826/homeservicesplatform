@@ -1,0 +1,79 @@
+/* Navbar container */
+nav {
+  background-color: black;
+  color: white;
+  padding: 16px 24px;
+}
+
+/* Flex container for aligning items */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Logo styling */
+.text-2xl {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Navigation links */
+.flex a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 16px;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Hover effect for nav links */
+.flex a:hover {
+  background-color: skyblue;
+  color: red;
+}
+
+/* User avatar styling */
+.relative button img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid white;
+  cursor: pointer;
+}
+
+/* User dropdown menu */
+.relative div {
+  position: absolute;
+  right: 0;
+  margin-top: 8px;
+  width: 180px;
+  background-color: white;
+  color: black;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  display: none;
+}
+
+/* Display dropdown menu on open */
+.relative:hover div {
+  display: block;
+}
+
+/* User dropdown items */
+.relative div button {
+  width: 100%;
+  text-align: left;
+  padding: 10px;
+  background: none;
+  border: none;
+  color: black;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Hover effect for user dropdown items */
+.relative div button:hover {
+  background-color: skyblue;
+  color: red;
+}

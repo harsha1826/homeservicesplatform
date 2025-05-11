@@ -1,0 +1,186 @@
+/* Overall Login Page */
+.login-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Background Image Transition */
+  .background-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 1.5s ease-in-out;
+    opacity: 1;
+  }
+  
+  /* Background Video */
+  .background-video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 1.5s ease-in-out;
+  }
+  
+  /* Overlay */
+  .background-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(8px);
+    z-index: 1;
+  }
+  
+  /* Neon Border Color Animation */
+@keyframes neonBorderCycle {
+    0% { border-color: #0ff; box-shadow: 0 0 15px #0ff; }
+    25% { border-color: #ff00ff; box-shadow: 0 0 15px #ff00ff; }
+    50% { border-color: #00ff00; box-shadow: 0 0 15px #00ff00; }
+    75% { border-color: #ff4500; box-shadow: 0 0 15px #ff4500; }
+    100% { border-color: #0ff; box-shadow: 0 0 15px #0ff; }
+  }
+  .relative-closure {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;  /* Adjust size as needed */
+    height: 50px; /* Adjust size as needed */
+    position: relative;
+  }
+  
+  .relative-closure img {
+    width: 40px;  /* Small size for the logo */
+    height: 40px;
+    border-radius: 50%; /* Makes it circular */
+    border: 2px solid white; /* White border around the image */
+    object-fit: cover; /* Ensures image covers the entire area */
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .relative-closure img:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+  }
+  
+  
+  .login-container {
+    position: relative;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid #0ff; /* Initial border color */
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    padding: 40px;
+    width: 350px;
+    text-align: center;
+    box-shadow: 0 0 15px #0ff;
+    animation: fadeIn 1.5s ease-in-out, neonBorderCycle 5s infinite alternate ease-in-out;
+  }
+  
+  
+  /* Neon Text with Color Transition */
+@keyframes neonColorCycle {
+    0% { color: #0ff; text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #00f; }
+    25% { color: #ff00ff; text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #f0f; }
+    50% { color: #00ff00; text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #0f0; }
+    75% { color: #ff4500; text-shadow: 0 0 10px #ff4500, 0 0 20px #ff4500, 0 0 30px #ff6347; }
+    100% { color: #0ff; text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #00f; }
+  }
+  
+  .neon-text {
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    animation: neonColorCycle 5s infinite alternate ease-in-out;
+    margin-bottom: 20px;
+  }
+  
+  
+  /* Input Fields */
+  .login-container input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    outline: none;
+    font-size: 14px;
+    transition: 0.3s;
+    border: 2px solid transparent;
+  }
+  
+  .login-container input::placeholder {
+    color: #aaa;
+  }
+  
+  .login-container input:focus {
+    border-color: #0ff;
+    box-shadow: 0 0 10px #0ff;
+  }
+  
+  /* Futuristic Button */
+  .login-container button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(45deg, #00f, #0ff);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-transform: uppercase;
+    font-weight: bold;
+    box-shadow: 0 0 10px #0ff;
+  }
+  
+  .login-container button:hover {
+    box-shadow: 0 0 20px #0ff, 0 0 30px #00f;
+  }
+  
+  /* Switch to Signup */
+  .login-container p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #fff;
+  }
+  
+  .login-container a {
+    color: #0ff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .login-container a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .profession-select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
